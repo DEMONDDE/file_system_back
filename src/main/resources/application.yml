@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      host: 101.43.201.229
+      port: 27017
+      username: hjd
+      password: hjd
+      database: hjd
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.43.201.229:3306/demo
+    username: admin
+    password: 123456
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #定义xml文件位置，不是必须的，如果需要在xml写sql请配置此选项
+  type-aliases-package: com.hjd.data # 注意：对应实体类的路径
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper:
+    mappers: com.gogle.mgt.dataaccess.mybatis.TkMapper #通用基类配置
+    identity: MYSQL
+server:
+  port: 7000
