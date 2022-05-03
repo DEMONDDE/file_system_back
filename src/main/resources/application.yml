@@ -12,6 +12,11 @@ spring:
     username: admin
     password: 123456
 
+  rabbitmq:
+    host: 101.43.201.229
+    username: guest
+    password: guest
+
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml #定义xml文件位置，不是必须的，如果需要在xml写sql请配置此选项
@@ -22,4 +27,4 @@ mybatis:
     mappers: com.gogle.mgt.dataaccess.mybatis.TkMapper #通用基类配置
     identity: MYSQL
 server:
-  port: 7000
+  port: 7001
